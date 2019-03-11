@@ -20,7 +20,8 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-               
+        login lg = new login();
+               painelPrincipal.add(lg, "login");
     }
 
     /**
