@@ -9,14 +9,13 @@ import java.awt.CardLayout;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import viwes.Agenda;
 import viwes.CadastroColaborador;
-import viwes.login;
 
 /**
  *
  * @author Aluno
  */
 public class FramePrincipal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form FramePrincipal
      */
@@ -26,17 +25,17 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         Agenda ag = new Agenda();
         CadastroColaborador cad = new CadastroColaborador();
-        login log = new login();
         
 
-        FramePrincipal.add(ag, "agenda");
-        FramePrincipal.add(cad, "cadColab");
-        FramePrincipal.add(log, "login");
+        PainelPrincipal.add(ag, "agenda");
+        PainelPrincipal.add(cad, "cadColab");
+        PainelPrincipal.add(loginPrincipal, "login");
+        PainelPrincipal.add(menuPrincipal, "menuPrincipal");
         
 
         //Chamar a tela padrão aqui
-        CardLayout cl = (CardLayout) FramePrincipal.getLayout();
-        cl.show(FramePrincipal, "login");
+        CardLayout cl = (CardLayout) PainelPrincipal.getLayout();
+        cl.show(PainelPrincipal, "login");
         
         this.setExtendedState(MAXIMIZED_BOTH);
     }
@@ -50,7 +49,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        FramePrincipal = new javax.swing.JPanel();
+        PainelPrincipal = new javax.swing.JPanel();
         menuPrincipal = new javax.swing.JPanel();
         btnEditarColaborador = new javax.swing.JButton();
         lbTarefa = new javax.swing.JLabel();
@@ -71,7 +70,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEliminarEquipe = new javax.swing.JButton();
         btnCadastrarColaborador = new javax.swing.JButton();
         btnListarEquipe = new javax.swing.JButton();
-        login = new javax.swing.JPanel();
+        loginPrincipal = new javax.swing.JPanel();
         labelUsuario2 = new javax.swing.JLabel();
         labelSenha2 = new javax.swing.JLabel();
         cpUsuario2 = new javax.swing.JTextField();
@@ -81,9 +80,14 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        FramePrincipal.setLayout(new java.awt.CardLayout());
+        PainelPrincipal.setLayout(new java.awt.CardLayout());
 
         btnEditarColaborador.setText("Editar");
+        btnEditarColaborador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarColaboradorActionPerformed(evt);
+            }
+        });
 
         lbTarefa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lbTarefa.setText("Tarefas");
@@ -102,6 +106,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         lbAgenda.setText("Agenda");
 
         btnAgendaColaborador.setText("Agenda Colaborador");
+        btnAgendaColaborador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgendaColaboradorActionPerformed(evt);
+            }
+        });
 
         btnAgendaEquipe.setText("Agenda Equipe");
 
@@ -224,7 +233,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        FramePrincipal.add(menuPrincipal, "card2");
+        PainelPrincipal.add(menuPrincipal, "card2");
 
         labelUsuario2.setText("Usuário:");
 
@@ -252,40 +261,40 @@ public class FramePrincipal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login);
-        login.setLayout(loginLayout);
-        loginLayout.setHorizontalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginLayout.createSequentialGroup()
+        javax.swing.GroupLayout loginPrincipalLayout = new javax.swing.GroupLayout(loginPrincipal);
+        loginPrincipal.setLayout(loginPrincipalLayout);
+        loginPrincipalLayout.setHorizontalGroup(
+            loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPrincipalLayout.createSequentialGroup()
                 .addGap(0, 136, Short.MAX_VALUE)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelSenha2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(labelUsuario2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(cpUsuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(loginLayout.createSequentialGroup()
+                        .addGroup(loginPrincipalLayout.createSequentialGroup()
                             .addComponent(btnLogin)
                             .addGap(9, 9, 9)))
                     .addComponent(cpSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(152, 152, 152))
-            .addGroup(loginLayout.createSequentialGroup()
+            .addGroup(loginPrincipalLayout.createSequentialGroup()
                 .addGap(169, 169, 169)
                 .addComponent(labelLogin)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        loginLayout.setVerticalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginLayout.createSequentialGroup()
+        loginPrincipalLayout.setVerticalGroup(
+            loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelUsuario2)
                     .addComponent(cpUsuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(loginPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSenha2)
                     .addComponent(cpSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
@@ -293,32 +302,34 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addGap(56, 56, 56))
         );
 
-        FramePrincipal.add(login, "card3");
+        PainelPrincipal.add(loginPrincipal, "card3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(FramePrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(FramePrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnCadastrarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarEquipeActionPerformed
-
+        CardLayout cl = (CardLayout) PainelPrincipal.getLayout();
+        cl.show(this.PainelPrincipal, "");
     }//GEN-LAST:event_BtnCadastrarEquipeActionPerformed
 
     private void btnCadastrarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarColaboradorActionPerformed
-        
+        CardLayout cl = (CardLayout) PainelPrincipal.getLayout();
+        cl.show(this.PainelPrincipal, "cadColab");
     }//GEN-LAST:event_btnCadastrarColaboradorActionPerformed
 
     private void cpUsuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpUsuario2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cpUsuario2ActionPerformed
 
     private void cpSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpSenhaActionPerformed
@@ -326,9 +337,18 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_cpSenhaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        CardLayout cl = (CardLayout) FramePrincipal.getLayout();
-        cl.show(this.FramePrincipal, "menPrincipal");
+        CardLayout cl = (CardLayout) PainelPrincipal.getLayout();
+        cl.show(this.PainelPrincipal, "menuPrincipal");
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnEditarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarColaboradorActionPerformed
+        
+    }//GEN-LAST:event_btnEditarColaboradorActionPerformed
+
+    private void btnAgendaColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendaColaboradorActionPerformed
+        CardLayout cl = (CardLayout) PainelPrincipal.getLayout();
+        cl.show(this.PainelPrincipal, "agenda");
+    }//GEN-LAST:event_btnAgendaColaboradorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -367,7 +387,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCadastrarEquipe;
-    private javax.swing.JPanel FramePrincipal;
+    private javax.swing.JPanel PainelPrincipal;
     private javax.swing.JButton btnAdicionarTarefa;
     private javax.swing.JButton btnAgendaColaborador;
     private javax.swing.JButton btnAgendaEquipe;
@@ -400,7 +420,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lbEquipe;
     private javax.swing.JLabel lbSistema;
     private javax.swing.JLabel lbTarefa;
-    private javax.swing.JPanel login;
+    private javax.swing.JPanel loginPrincipal;
     private javax.swing.JPanel menuPrincipal;
     // End of variables declaration//GEN-END:variables
 }
