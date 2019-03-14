@@ -7,12 +7,12 @@ package viwes;
 
 /**
  *
- * @author Aluno
+ * @author eduar
  */
-public class MenuGestor extends javax.swing.JPanel {
+public class MenuGestor extends javax.swing.JFrame {
 
     /**
-     * Creates new form Menu
+     * Creates new form MenuGestor
      */
     public MenuGestor() {
         initComponents();
@@ -27,28 +27,33 @@ public class MenuGestor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        labelManterColaborador = new javax.swing.JLabel();
+        lbSistema = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        lbColaborador = new javax.swing.JLabel();
         btnCadastrarColaborador = new javax.swing.JButton();
         btnEditarColaborador = new javax.swing.JButton();
         btnEliminarColaborador = new javax.swing.JButton();
-        Listar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        btnVerAgendaColaborador = new javax.swing.JButton();
-        btnVerAgendaEquipe = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        btnCadastrarEquipe = new javax.swing.JButton();
+        btnListarColaborador = new javax.swing.JButton();
+        lbAgenda = new javax.swing.JLabel();
+        btnAgendaColaborador = new javax.swing.JButton();
+        btnAgendaEquipe = new javax.swing.JButton();
+        lbEquipe = new javax.swing.JLabel();
+        BtnCadastrarEquipe = new javax.swing.JButton();
         btnEditarEquipe = new javax.swing.JButton();
         btnEliminarEquipe = new javax.swing.JButton();
         btnListarEquipe = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        lbTarefa = new javax.swing.JLabel();
         btnAdicionarTarefa = new javax.swing.JButton();
         btnEliminarTarefa = new javax.swing.JButton();
         btnEditarTarefa = new javax.swing.JButton();
 
-        jLabel1.setText("Sistema");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        labelManterColaborador.setText("Manter Colaborador:");
+        lbSistema.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbSistema.setText("Sistema");
+
+        lbColaborador.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbColaborador.setText("Colaborador");
 
         btnCadastrarColaborador.setText("Cadastrar");
         btnCadastrarColaborador.addActionListener(new java.awt.event.ActionListener() {
@@ -58,233 +63,201 @@ public class MenuGestor extends javax.swing.JPanel {
         });
 
         btnEditarColaborador.setText("Editar");
-        btnEditarColaborador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarColaboradorActionPerformed(evt);
-            }
-        });
 
         btnEliminarColaborador.setText("Eliminar");
-        btnEliminarColaborador.addActionListener(new java.awt.event.ActionListener() {
+
+        btnListarColaborador.setText("Listar");
+
+        lbAgenda.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbAgenda.setText("Agenda");
+
+        btnAgendaColaborador.setText("Agenda Colaborador");
+
+        btnAgendaEquipe.setText("Agenda Equipe");
+
+        lbEquipe.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbEquipe.setText("Equipe");
+
+        BtnCadastrarEquipe.setText("Cadastrar");
+        BtnCadastrarEquipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarColaboradorActionPerformed(evt);
-            }
-        });
-
-        Listar.setText("Listar");
-        Listar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ListarActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Consultar Agenda:");
-
-        btnVerAgendaColaborador.setText("Ver agenda colaborador");
-        btnVerAgendaColaborador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerAgendaColaboradorActionPerformed(evt);
-            }
-        });
-
-        btnVerAgendaEquipe.setText("Ver agenda da Equipe");
-        btnVerAgendaEquipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerAgendaEquipeActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Manter Equipe:");
-
-        btnCadastrarEquipe.setText("Cadastrar");
-        btnCadastrarEquipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastrarEquipeActionPerformed(evt);
+                BtnCadastrarEquipeActionPerformed(evt);
             }
         });
 
         btnEditarEquipe.setText("Editar");
-        btnEditarEquipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarEquipeActionPerformed(evt);
-            }
-        });
 
         btnEliminarEquipe.setText("Eliminar");
-        btnEliminarEquipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarEquipeActionPerformed(evt);
-            }
-        });
 
         btnListarEquipe.setText("Listar");
-        btnListarEquipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListarEquipeActionPerformed(evt);
-            }
-        });
 
-        jLabel4.setText("Manter Tarefas:");
+        lbTarefa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbTarefa.setText("Tarefas");
 
-        btnAdicionarTarefa.setText("Adicionar Tarefa");
+        btnAdicionarTarefa.setText("Adicionar");
 
-        btnEliminarTarefa.setText("Eliminar Tarefa");
+        btnEliminarTarefa.setText("Eliminar");
 
-        btnEditarTarefa.setText("Editar Tarefa");
-        btnEditarTarefa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarTarefaActionPerformed(evt);
-            }
-        });
+        btnEditarTarefa.setText("Editar");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addComponent(lbSistema)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnEditarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnEliminarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnListarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAgendaColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelManterColaborador)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnCadastrarColaborador)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(2, 2, 2)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnEliminarColaborador)
-                                            .addComponent(btnEditarColaborador)
-                                            .addComponent(Listar)
-                                            .addComponent(jLabel2)
-                                            .addComponent(btnVerAgendaColaborador)
-                                            .addComponent(btnVerAgendaEquipe))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnCadastrarEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnEditarEquipe)
-                                    .addComponent(btnEliminarEquipe)
-                                    .addComponent(btnListarEquipe)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnAdicionarTarefa)
-                                    .addComponent(btnEliminarTarefa)
-                                    .addComponent(btnEditarTarefa))))))
-                .addGap(97, 97, 97))
+                                .addGap(20, 20, 20)
+                                .addComponent(lbColaborador))
+                            .addComponent(btnAgendaEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCadastrarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(lbAgenda)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnEliminarTarefa, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(lbEquipe)
+                            .addGap(98, 98, 98))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(lbTarefa)
+                            .addGap(95, 95, 95))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(BtnCadastrarEquipe)
+                                .addComponent(btnAdicionarTarefa, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnEditarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnEliminarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnListarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(82, 82, 82)))
+                    .addComponent(btnEditarTarefa, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelManterColaborador)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadastrarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCadastrarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addComponent(lbSistema, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEditarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEditarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Listar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnListarEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(lbColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnVerAgendaColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVerAgendaEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAdicionarTarefa)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEliminarTarefa)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEditarTarefa)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCadastrarColaborador)
+                    .addComponent(BtnCadastrarEquipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarColaborador)
+                    .addComponent(btnEditarEquipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEliminarColaborador)
+                    .addComponent(btnEliminarEquipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnListarColaborador)
+                    .addComponent(btnListarEquipe))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbTarefa, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAgendaColaborador)
+                    .addComponent(btnAdicionarTarefa))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAgendaEquipe)
+                    .addComponent(btnEliminarTarefa))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEditarTarefa)
+                .addContainerGap(99, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarColaboradorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCadastrarColaboradorActionPerformed
 
-    private void btnEditarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarColaboradorActionPerformed
+    private void BtnCadastrarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarEquipeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarColaboradorActionPerformed
+    }//GEN-LAST:event_BtnCadastrarEquipeActionPerformed
 
-    private void btnEliminarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarColaboradorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarColaboradorActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MenuGestor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MenuGestor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MenuGestor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MenuGestor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    private void ListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ListarActionPerformed
-
-    private void btnVerAgendaColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAgendaColaboradorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVerAgendaColaboradorActionPerformed
-
-    private void btnVerAgendaEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAgendaEquipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVerAgendaEquipeActionPerformed
-
-    private void btnCadastrarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarEquipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCadastrarEquipeActionPerformed
-
-    private void btnEditarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEquipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarEquipeActionPerformed
-
-    private void btnEliminarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEquipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarEquipeActionPerformed
-
-    private void btnListarEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarEquipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnListarEquipeActionPerformed
-
-    private void btnEditarTarefaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarTarefaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarTarefaActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MenuGestor().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Listar;
+    private javax.swing.JButton BtnCadastrarEquipe;
     private javax.swing.JButton btnAdicionarTarefa;
+    private javax.swing.JButton btnAgendaColaborador;
+    private javax.swing.JButton btnAgendaEquipe;
     private javax.swing.JButton btnCadastrarColaborador;
-    private javax.swing.JButton btnCadastrarEquipe;
     private javax.swing.JButton btnEditarColaborador;
     private javax.swing.JButton btnEditarEquipe;
     private javax.swing.JButton btnEditarTarefa;
     private javax.swing.JButton btnEliminarColaborador;
     private javax.swing.JButton btnEliminarEquipe;
     private javax.swing.JButton btnEliminarTarefa;
+    private javax.swing.JButton btnListarColaborador;
     private javax.swing.JButton btnListarEquipe;
-    private javax.swing.JButton btnVerAgendaColaborador;
-    private javax.swing.JButton btnVerAgendaEquipe;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel labelManterColaborador;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lbAgenda;
+    private javax.swing.JLabel lbColaborador;
+    private javax.swing.JLabel lbEquipe;
+    private javax.swing.JLabel lbSistema;
+    private javax.swing.JLabel lbTarefa;
     // End of variables declaration//GEN-END:variables
 }
